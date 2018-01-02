@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.8"/>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="lib" path="Libs/commons-validator-1.6.jar"/>
+	<classpathentry kind="lib" path="Libs/java-client-5.0.3.jar" sourcepath="Libs/java-client-5.0.3-sources.jar">
+		<attributes>
+			<attribute name="javadoc_location" value="jar:platform:/resource/MobileAppsAutomation/Libs/java-client-5.0.3-javadoc.jar!/"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="Libs/selenium-server-standalone-3.6.0.jar"/>
+	<classpathentry kind="lib" path="Libs/client-combined-3.5.3-nodeps.jar"/>
+	<classpathentry kind="lib" path="Libs/java-client-5.0.3-javadoc.jar"/>
+	<classpathentry kind="lib" path="Libs/java-client-5.0.3-sources.jar"/>
+	<classpathentry kind="lib" path="Libs/javax.mail.jar"/>
+	<classpathentry kind="lib" path="Libs/javax.usb.jar"/>
+	<classpathentry kind="lib" path="Libs/ReportNG jar files/guice-3.0.jar"/>
+	<classpathentry kind="lib" path="Libs/ReportNG jar files/reportng-1.1.4.jar" sourcepath="Libs/ReportNG jar files/reportng-1.1.4-sources.jar"/>
+	<classpathentry kind="lib" path="Libs/ReportNG jar files/velocity-dep-1.4.jar"/>
+	<classpathentry kind="lib" path="Libs/poi-3.15/poi-3.15.jar"/>
+	<classpathentry kind="lib" path="Libs/poi-3.15/poi-examples-3.15.jar"/>
+	<classpathentry kind="lib" path="Libs/poi-3.15/poi-excelant-3.15.jar"/>
+	<classpathentry kind="lib" path="Libs/poi-3.15/poi-ooxml-3.15.jar"/>
+	<classpathentry kind="lib" path="Libs/poi-3.15/poi-ooxml-schemas-3.15.jar"/>
+	<classpathentry kind="lib" path="Libs/poi-3.15/poi-scratchpad-3.15.jar"/>
+	<classpathentry kind="lib" path="Libs/poi-3.15/ooxml-lib/curvesapi-1.04.jar"/>
+	<classpathentry kind="lib" path="Libs/poi-3.15/ooxml-lib/xmlbeans-2.6.0.jar"/>
+	<classpathentry kind="lib" path="Libs/poi-3.15/lib/commons-codec-1.10.jar"/>
+	<classpathentry kind="lib" path="Libs/poi-3.15/lib/commons-collections4-4.1.jar"/>
+	<classpathentry kind="lib" path="Libs/poi-3.15/lib/commons-logging-1.2.jar"/>
+	<classpathentry kind="lib" path="Libs/poi-3.15/lib/junit-4.12.jar"/>
+	<classpathentry kind="lib" path="Libs/poi-3.15/lib/log4j-1.2.17.jar"/>
+	<classpathentry kind="lib" path="Libs/lib/cglib-nodep-3.2.4.jar"/>
+	<classpathentry kind="lib" path="Libs/lib/commons-codec-1.10.jar"/>
+	<classpathentry kind="lib" path="Libs/lib/commons-exec-1.3.jar"/>
+	<classpathentry kind="lib" path="Libs/lib/commons-io-2.5.jar"/>
+	<classpathentry kind="lib" path="Libs/lib/commons-lang3-3.5.jar"/>
+	<classpathentry kind="lib" path="Libs/lib/commons-logging-1.2.jar"/>
+	<classpathentry kind="lib" path="Libs/lib/cssparser-0.9.23.jar"/>
+	<classpathentry kind="lib" path="Libs/lib/gson-2.8.0.jar"/>
+	<classpathentry kind="lib" path="Libs/lib/guava-23.0.jar"/>
+	<classpathentry kind="lib" path="Libs/lib/hamcrest-core-1.3.jar"/>
+	<classpathentry kind="lib" path="Libs/lib/htmlunit-2.27.jar"/>
+	<classpathentry kind="lib" path="Libs/lib/htmlunit-core-js-2.27.jar"/>
+	<classpathentry kind="lib" path="Libs/lib/htmlunit-driver-2.27.jar"/>
+	<classpathentry kind="lib" path="Libs/lib/httpclient-4.5.3.jar"/>
+	<classpathentry kind="lib" path="Libs/lib/httpcore-4.4.6.jar"/>
+	<classpathentry kind="lib" path="Libs/lib/httpmime-4.5.3.jar"/>
+	<classpathentry kind="lib" path="Libs/lib/javax.servlet-api-3.1.0.jar"/>
+	<classpathentry kind="lib" path="Libs/lib/jetty-client-9.4.5.v20170502.jar"/>
+	<classpathentry kind="lib" path="Libs/lib/jetty-http-9.4.5.v20170502.jar"/>
+	<classpathentry kind="lib" path="Libs/lib/jetty-io-9.4.5.v20170502.jar"/>
+	<classpathentry kind="lib" path="Libs/lib/jetty-util-9.4.5.v20170502.jar"/>
+	<classpathentry kind="lib" path="Libs/lib/jna-4.1.0.jar"/>
+	<classpathentry kind="lib" path="Libs/lib/jna-platform-4.1.0.jar"/>
+	<classpathentry kind="lib" path="Libs/lib/junit-4.12.jar"/>
+	<classpathentry kind="lib" path="Libs/lib/neko-htmlunit-2.27.jar"/>
+	<classpathentry kind="lib" path="Libs/lib/phantomjsdriver-1.4.0.jar"/>
+	<classpathentry kind="lib" path="Libs/lib/sac-1.3.jar"/>
+	<classpathentry kind="lib" path="Libs/lib/serializer-2.7.2.jar"/>
+	<classpathentry kind="lib" path="Libs/lib/websocket-api-9.4.5.v20170502.jar"/>
+	<classpathentry kind="lib" path="Libs/lib/websocket-client-9.4.5.v20170502.jar"/>
+	<classpathentry kind="lib" path="Libs/lib/websocket-common-9.4.5.v20170502.jar"/>
+	<classpathentry kind="lib" path="Libs/lib/xalan-2.7.2.jar"/>
+	<classpathentry kind="lib" path="Libs/lib/xercesImpl-2.11.0.jar"/>
+	<classpathentry kind="lib" path="Libs/lib/xml-apis-1.4.01.jar"/>
+	<classpathentry kind="con" path="org.testng.TESTNG_CONTAINER"/>
+	<classpathentry kind="lib" path="Libs/javax.mail-api-1.4.4.jar"/>
+	<classpathentry kind="lib" path="Libs/jsoup-1.11.2.jar"/>
+	<classpathentry kind="lib" path="Libs/jsoup-1.11.2 (1).jar"/>
+	<classpathentry kind="lib" path="Libs/jsoup-1.11.2-javadoc.jar"/>
+	<classpathentry kind="lib" path="Libs/jsoup-1.11.2-sources.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>
