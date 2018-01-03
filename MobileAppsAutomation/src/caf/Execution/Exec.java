@@ -29,7 +29,7 @@ public class Exec {
 
 	@AfterTest
 	public void sendMail() throws Exception {
-		// mail.htmlMail();
+		mail.htmlMail();
 	}
 
 }
