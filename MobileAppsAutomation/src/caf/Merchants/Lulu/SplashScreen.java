@@ -4,19 +4,18 @@ import java.io.IOException;
 
 import caf.FrameworkLibrary.*;
 
+public class SplashScreen extends CapDriver { // Next extension LocationSelectionPage
 
-public class SplashScreen extends CapDriver { // Next extension  LocationSelectionPage
-
-	public void click_SwipeBtn_SplashScreen(int NumberOfSwipes) throws IOException {
-		//String swipeBtn = this.locatorByOS(id+"tutorialNextButton", null);
-		for(int i=1;i<=NumberOfSwipes;i++) {
-		super.click(id+"tutorialNextButton", null);
-		}
+	
+	
+	public void click_Allowlocation_SplashScreen() throws IOException {
+		super.click(id + "com.android.packageinstaller:id/permission_allow_button", null);
 	}
 
+	public void click_Denylocation_SplashScreen() throws IOException {
+		super.click(id + "com.android.packageinstaller:id/permission_deny_button", null);
+	}
 	public void resetApp_SplashScreen() throws IOException, InterruptedException {
 		super.resetApp();
-		this.click_SwipeBtn_SplashScreen(3);
-	}
-
+this.click_Allowlocation_SplashScreen();	}
 }
