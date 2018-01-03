@@ -62,6 +62,7 @@ public class DataConfig {
 
 	protected String endXpath = "]";
 	protected String customReportFilename = Dir + "/test-output/custom-report.html";
+	protected String locator_iOS = null;
 
 	public void updateTrow(int Trow1) throws IOException {
 		Trow = Trow1;
@@ -94,10 +95,8 @@ public class DataConfig {
 		return columnCount;
 	}
 
-	
-	
-	
-	public void waitForElement_Clickable(@SuppressWarnings("rawtypes") AppiumDriver driver, String locator, int waitTime) {
+	public void waitForElement_Clickable(@SuppressWarnings("rawtypes") AppiumDriver driver, String locator,
+			int waitTime) {
 		WebDriverWait wait = new WebDriverWait(driver, waitTime);
 		System.out.println("locator_key is :" + locator);
 		String locatorType = locator.split(locatorSeparator)[0];
@@ -111,7 +110,6 @@ public class DataConfig {
 			} catch (Exception e) {
 				System.out.println("locator not found and locator is : " + locatorValue);
 			}
-			
 
 			break;
 		case "xpath":
@@ -130,21 +128,22 @@ public class DataConfig {
 			break;
 		}
 	}
-	
-	public void waitForElement_Clickable(@SuppressWarnings("rawtypes") AppiumDriver driver, String locator_Android, String locator_iOS, int waitTime) {
-		String locator=this.locatorByOS(locator_Android, locator_iOS);
+
+	public void waitForElement_Clickable(@SuppressWarnings("rawtypes") AppiumDriver driver, String locator_Android,
+			String locator_iOS, int waitTime) {
+		String locator = this.locatorByOS(locator_Android, locator_iOS);
 		this.waitForElement_Clickable(driver, locator, waitTime);
 	}
-		
-	
-	public WebElement waitForElement(@SuppressWarnings("rawtypes") AppiumDriver driver, String locator_Android, String locator_iOS, int waitTime) {
+
+	public WebElement waitForElement(@SuppressWarnings("rawtypes") AppiumDriver driver, String locator_Android,
+			String locator_iOS, int waitTime) {
 		WebElement Element = null;
-		String locator=this.locatorByOS(locator_Android, locator_iOS);
-		Element=this.waitForElement(driver, locator, waitTime);
+		String locator = this.locatorByOS(locator_Android, locator_iOS);
+		Element = this.waitForElement(driver, locator, waitTime);
 		return Element;
 	}
 
-	public WebElement waitForElement(@SuppressWarnings("rawtypes") AppiumDriver driver,String locator, int waitTime) {
+	public WebElement waitForElement(@SuppressWarnings("rawtypes") AppiumDriver driver, String locator, int waitTime) {
 		WebElement Element = null;
 		System.out.println("locator_key is :" + locator);
 		String locatorType = locator.split(locatorSeparator)[0];
@@ -370,8 +369,9 @@ public class DataConfig {
 	}
 
 	public String pvData(String propertyFileKey) {
-		
-		String propertyFilePath = propFilesPath + this.pvts("Merchant" + Trow) + "/" + this.pvts("Merchant" + Trow) + "_Data.properties";
+
+		String propertyFilePath = propFilesPath + this.pvts("Merchant" + Trow) + "/" + this.pvts("Merchant" + Trow)
+				+ "_Data.properties";
 		String propertyFileValue = "Please check property file key";
 		InputStream is = null;
 		Properties prop = null;
@@ -411,7 +411,7 @@ public class DataConfig {
 		Properties props = new Properties();
 		props.load(in);
 		in.close();
-		
+
 		FileOutputStream out = new FileOutputStream(propertyFilePath);
 		props.setProperty("MerchantName", this.excelFormulaValTestSuite(Trow, 1));
 		props.setProperty("OS", this.excelFormulaValTestSuite(Trow, 2));
@@ -419,12 +419,11 @@ public class DataConfig {
 		props.setProperty("DeviceName", this.excelFormulaValTestSuite(Trow, 4));
 		props.setProperty("Udid", this.excelFormulaValTestSuite(Trow, 5));
 		props.setProperty("PlatformVersion", this.excelFormulaValTestSuite(Trow, 6));
-		
+
 		props.store(out, null);
 		out.close();
 	}
 
-	
 	public String locatorByOS(String locator_Android, String locator_iOS) {
 		String locator = null;
 		System.out.println("OS is : " + this.getOS());
@@ -437,66 +436,66 @@ public class DataConfig {
 		return locator;
 
 	}
-	
+
 	// Copy TestSuite excel data to property file
-		public void updateTestSuiteProperties() throws IOException {
+	public void updateTestSuiteProperties() throws IOException {
 
-			int Trow = getSheetRowCount(excelPath, sheetName);
-			for (int i = 1; i <= Trow; i++) {
+		int Trow = getSheetRowCount(excelPath, sheetName);
+		for (int i = 1; i <= Trow; i++) {
 
-				try {
-					Properties props = new Properties();
-
-					File f = new File(prop_TestSuite);
-					InputStream input = new FileInputStream(f);
-
-					if (input != null) {
-						System.out.println("Copying row number in Test Suite excel is :" + i);
-
-						props.load(input);
-						props.setProperty("ExecutionStatus" + i, this.excelFormulaValTestSuite(i, 0));
-						props.setProperty("Merchant" + i, this.excelFormulaValTestSuite(i, 1));
-						props.setProperty("OS" + i, this.excelFormulaValTestSuite(i, 2));
-						props.setProperty("Version" + i, this.excelFormulaValTestSuite(i, 3));
-						props.setProperty("DeviceName" + i, this.excelFormulaValTestSuite(i, 4));
-						props.setProperty("Udid" + i, this.excelFormulaValTestSuite(i, 5));
-						props.setProperty("platformVersion" + i, this.excelFormulaValTestSuite(i, 6));
-						props.setProperty("P0" + i, this.excelFormulaValTestSuite(i, 7));
-						props.setProperty("P1" + i, this.excelFormulaValTestSuite(i, 8));
-						props.setProperty("P2" + i, this.excelFormulaValTestSuite(i, 9));
-						props.setProperty("OTS" + i, this.excelFormulaValTestSuite(i, 10));
-						OutputStream out = new FileOutputStream(f);
-						props.store(out, "save");
-						System.out.println("Rows done in Test Suite excel :" + i);
-					}
-				} catch (FileNotFoundException e) {
-					e.printStackTrace();
-				} catch (IOException e) {
-					e.printStackTrace();
-				}
-			}
-		}
-
-		public String pvts(String propertyFileKey) {
-			String propertyFileValue = "Please check property file key";
-			InputStream is = null;
-			Properties prop = null;
 			try {
-				prop = new Properties();
-				is = new FileInputStream(new File(prop_TestSuite));
-				prop.load(is);
-				propertyFileValue = prop.getProperty(propertyFileKey);
+				Properties props = new Properties();
+
+				File f = new File(prop_TestSuite);
+				InputStream input = new FileInputStream(f);
+
+				if (input != null) {
+					System.out.println("Copying row number in Test Suite excel is :" + i);
+
+					props.load(input);
+					props.setProperty("ExecutionStatus" + i, this.excelFormulaValTestSuite(i, 0));
+					props.setProperty("Merchant" + i, this.excelFormulaValTestSuite(i, 1));
+					props.setProperty("OS" + i, this.excelFormulaValTestSuite(i, 2));
+					props.setProperty("Version" + i, this.excelFormulaValTestSuite(i, 3));
+					props.setProperty("DeviceName" + i, this.excelFormulaValTestSuite(i, 4));
+					props.setProperty("Udid" + i, this.excelFormulaValTestSuite(i, 5));
+					props.setProperty("platformVersion" + i, this.excelFormulaValTestSuite(i, 6));
+					props.setProperty("P0" + i, this.excelFormulaValTestSuite(i, 7));
+					props.setProperty("P1" + i, this.excelFormulaValTestSuite(i, 8));
+					props.setProperty("P2" + i, this.excelFormulaValTestSuite(i, 9));
+					props.setProperty("OTS" + i, this.excelFormulaValTestSuite(i, 10));
+					OutputStream out = new FileOutputStream(f);
+					props.store(out, "save");
+					System.out.println("Rows done in Test Suite excel :" + i);
+				}
 			} catch (FileNotFoundException e) {
 				e.printStackTrace();
 			} catch (IOException e) {
 				e.printStackTrace();
 			}
-			return propertyFileValue;
 		}
+	}
 
-		// Get OS name by passing row value in TestSuite excel value
-		public String getOS() {
-			String s=pvts("OS" + Trow);
-			return s;
+	public String pvts(String propertyFileKey) {
+		String propertyFileValue = "Please check property file key";
+		InputStream is = null;
+		Properties prop = null;
+		try {
+			prop = new Properties();
+			is = new FileInputStream(new File(prop_TestSuite));
+			prop.load(is);
+			propertyFileValue = prop.getProperty(propertyFileKey);
+		} catch (FileNotFoundException e) {
+			e.printStackTrace();
+		} catch (IOException e) {
+			e.printStackTrace();
 		}
+		return propertyFileValue;
+	}
+
+	// Get OS name by passing row value in TestSuite excel value
+	public String getOS() {
+		String s = pvts("OS" + Trow);
+		return s;
+	}
 }
