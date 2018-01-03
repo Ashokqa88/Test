@@ -29,7 +29,7 @@ DataConfig dc = new DataConfig();
 
 	@AfterTest
 	public void sendMail() throws Exception {
-		mail.htmlMail();
+		//mail.htmlMail();
 	}
 
 }
