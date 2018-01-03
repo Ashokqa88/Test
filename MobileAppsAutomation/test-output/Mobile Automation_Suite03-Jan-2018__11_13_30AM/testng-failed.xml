@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Mobile Automation_Suite03-Jan-2018__11_13_30AM]" parallel="tests">
+  <listeners>
+    <listener class-name="org.uncommons.reportng.HTMLReporter"/>
+    <listener class-name="org.uncommons.reportng.JUnitXMLReporter"/>
+    <listener class-name="caf.FrameworkLibrary.Reporting.TestNGCustomReportListener"/>
+  </listeners>
+  <test name="Lulu_Android_Emulator_Nexus_6_7.1.1_1.0(failed)" parallel="tests">
+    <parameter name="Trow" value="1"/>
+    <classes>
+      <class name="caf.Suites.Lulu.P0_Testcases">
+        <methods>
+          <include name="results"/>
+          <include name="Signup"/>
+          <include name="AppsInstallation"/>
+          <include name="Quit"/>
+        </methods>
+      </class> <!-- caf.Suites.Lulu.P0_Testcases -->
+    </classes>
+  </test> <!-- Lulu_Android_Emulator_Nexus_6_7.1.1_1.0(failed) -->
+</suite> <!-- Failed suite [Mobile Automation_Suite03-Jan-2018__11_13_30AM] -->

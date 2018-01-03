@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
+  <reporter-output>
+    <line>
+      <![CDATA[<a  href=Screenshots_Output/Lulu_Android_Emulator_Nexus_6_7.1.1_1.0_pass_03-Jan-2018__11_21_37AM/Signup-[]-03-Jan-2018__11_24_45AM.jpg><p style="background-color:green;">Failed Screenshot :: Lulu_Android_Emulator_Nexus_6_7.1.1_1.0_pass_03-Jan-2018__11_21_37AM/Signup-[]-03-Jan-2018__11_24_45AM.jpg</p></a>]]>
+    </line>
+    <line>
+      <![CDATA[<html><body><img src=file://C:\Users\rajashekar.vorugala\eclipse-workspace\MobileAppsAutomation/test-output/html/Screenshots_Output/Lulu_Android_Emulator_Nexus_6_7.1.1_1.0_pass_03-Jan-2018__11_21_37AM/Signup-[]-03-Jan-2018__11_24_45AM.jpg alt=Filed Screenshot width="250" height="250"></body></html>]]>
+    </line>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="200493" started-at="2018-01-03T05:51:31Z" finished-at="2018-01-03T05:54:52Z">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="200493" started-at="2018-01-03T05:51:31Z" finished-at="2018-01-03T05:54:52Z">
+      <class name="caf.Execution.Exec">
+        <test-method status="PASS" signature="executeBefore()[pri:0, instance:caf.Execution.Exec@2758fe70]" name="executeBefore" is-config="true" duration-ms="5629" started-at="2018-01-03T11:21:31Z" finished-at="2018-01-03T11:21:37Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- executeBefore -->
+        <test-method status="PASS" signature="execute()[pri:0, instance:caf.Execution.Exec@2758fe70]" name="execute" duration-ms="194834" started-at="2018-01-03T11:21:37Z" finished-at="2018-01-03T11:24:52Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- execute -->
+        <test-method status="PASS" signature="sendMail()[pri:0, instance:caf.Execution.Exec@2758fe70]" name="sendMail" is-config="true" duration-ms="0" started-at="2018-01-03T11:24:52Z" finished-at="2018-01-03T11:24:52Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- sendMail -->
+      </class> <!-- caf.Execution.Exec -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
